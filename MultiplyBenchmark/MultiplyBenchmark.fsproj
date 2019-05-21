@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ManagedMultiply\ManagedMultiply.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TiledBenchmark.fs" />
+    <Compile Include="DivideConquerBenchmark.fs" />
+    <Compile Include="DivideConquerParallelBenchmark.fs" />
+    <Compile Include="ThreeLoopsBenchmark.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
+    <PackageReference Include="MathNet.Numerics" Version="4.7.0" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="4.7.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ThreeLoops.fs" />
+    <Compile Include="DivideAndConquer.fs" />
+    <Compile Include="DivideAndConquerParallel.fs" />
+    <Compile Include="DivideAndConquerParallelTask.fs" />
+  </ItemGroup>
+</Project>
