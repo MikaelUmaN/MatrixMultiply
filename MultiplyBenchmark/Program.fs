@@ -15,9 +15,9 @@ let main argv =
     let summaryStyle = SummaryStyle(true, SizeUnit.KB, TimeUnit.Millisecond, false)
     conf.Add(CsvExporter(CsvSeparator.CurrentCulture, summaryStyle))
 
-    BenchmarkRunner.Run<TiledBenchmark.Benchmark>(conf) |> ignore
-    BenchmarkRunner.Run<DivideConquerBenchmark.Benchmark>(conf) |> ignore
+    //BenchmarkRunner.Run<DivideConquerBenchmark.Benchmark>(conf) |> ignore
     BenchmarkRunner.Run<DivideConquerParallelBenchmark.Benchmark>(conf) |> ignore
-    BenchmarkRunner.Run<ThreeLoopsBenchmark.Benchmark>(conf) |> ignore
-    
+    //BenchmarkRunner.Run<TiledBenchmark.Benchmark>(conf) |> ignore
+    //BenchmarkRunner.Run<ThreeLoopsBenchmark.Benchmark>(conf) |> ignore
+
     0
