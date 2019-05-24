@@ -4,7 +4,7 @@ open ManagedMultiply
 open MathNet.Numerics.LinearAlgebra
 open BenchmarkDotNet.Attributes
 
-[<CoreJob(true); RPlotExporter; RankColumn>]
+[<RPlotExporter; RankColumn>]
 type Benchmark() =
 
     let mutable A: float[] = null

@@ -4,7 +4,7 @@ open ManagedMultiply
 open MathNet.Numerics.LinearAlgebra
 open BenchmarkDotNet.Attributes
 
-[<CoreJob(true); RPlotExporter; RankColumn>]
+[<RPlotExporter; RankColumn>]
 type Benchmark() =
 
     let mutable A: float[] = null
@@ -25,5 +25,5 @@ type Benchmark() =
 
     [<Benchmark>]
     member this.Benchmark() =
-        DivideConquer.divideAndConquer A B C this.N this.T
+        DivideConquerParallelTask.divideAndConquer A B C this.N this.T
         C
