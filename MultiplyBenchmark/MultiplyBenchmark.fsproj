@@ -11,11 +11,17 @@
     <Compile Include="DivideConquerBenchmark.fs" />
     <Compile Include="DivideConquerParallelBenchmark.fs" />
     <Compile Include="ThreeLoopsBenchmark.fs" />
+    <Compile Include="OpenBlas.fs" />
+    <Compile Include="IntelMkl.fs" />
+    <Compile Include="ManagedMultiply.fs" />
+    <Compile Include="ManagedMultiplySingleThreaded.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
     <PackageReference Include="MathNet.Numerics" Version="4.7.0" />
     <PackageReference Include="MathNet.Numerics.FSharp" Version="4.7.0" />
+    <PackageReference Include="MathNet.Numerics.MKL.Win" Version="2.3.0" />
+    <PackageReference Include="MathNet.Numerics.OpenBLAS.Win" Version="0.2.0" />
   </ItemGroup>
 </Project>
