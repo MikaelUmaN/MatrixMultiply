@@ -13,7 +13,7 @@ type Benchmark() =
     let mutable B: Matrix<float> = null
     let mutable C: Matrix<float> = null
 
-    [<Params(4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096)>]
+    [<Params(4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 12288)>]
     member val N = 0 with get, set
 
     [<GlobalSetup>]

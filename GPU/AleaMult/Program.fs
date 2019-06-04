@@ -1,18 +1,22 @@
-﻿
+﻿open System
+
+open BenchmarkDotNet.Running
+open BenchmarkDotNet.Configs
+open BenchmarkDotNet.Reports
+open BenchmarkDotNet.Columns
+open BenchmarkDotNet.Horology
+open BenchmarkDotNet.Exporters.Csv
+open BenchmarkDotNet.Jobs
+open BenchmarkDotNet.Toolchains.CsProj
+
 [<EntryPoint>]
 let main argv = 
+    let conf = ManualConfig.Create(DefaultConfig.Instance)
+    let summaryStyle = SummaryStyle(true, SizeUnit.KB, TimeUnit.Millisecond, false)
+    conf.Add(CsvExporter(CsvSeparator.CurrentCulture, summaryStyle))
 
-    // Just jitting and warmup
-    for i in 5..7 do
-        let sz = (int) <| 2.**float(i)
-        KernelTest.nopTest sz
+    BenchmarkRunner.Run<Nop.Benchmark>(conf) |> ignore
+    BenchmarkRunner.Run<NaiveGpuMult.Benchmark>(conf) |> ignore
+    BenchmarkRunner.Run<CublasMult.Benchmark>(conf) |> ignore
 
-
-    for i in 6..12 do
-        let sz = (int) <| 2.**float(i)
-        let stopWatch = System.Diagnostics.Stopwatch.StartNew()
-        KernelTest.nopTest sz
-        stopWatch.Stop()
-        printfn "Elapsed %A for size %A" stopWatch.ElapsedMilliseconds sz
-
-    0 // return an integer exit code
+    0

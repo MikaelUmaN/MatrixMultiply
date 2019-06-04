@@ -27,14 +27,14 @@ let arrayPlusTest =
 let nopTest sz =
     let N = sz*sz
 
-    let (harg1: float32[]) = Array.init N (fun i -> float32(i))
+    let (harg1: float[]) = Array.init N (fun i -> float(i))
 
     let gpu = Gpu.Default
     let darg1 = gpu.Allocate(harg1)
-    let dresult = gpu.Allocate<float32>(N)
+    let dresult = gpu.Allocate<float>(N)
 
     let nopKernel = 
-        <@ fun (arg:float32[]) (dresult:float32[]) ->
+        <@ fun (arg:float[]) (dresult:float[]) ->
             let nCols = gridDim.y * blockDim.y
             let xcor = blockIdx.x * blockDim.x + threadIdx.x // The column
             let ycor = blockIdx.y * blockDim.y + threadIdx.y // The row

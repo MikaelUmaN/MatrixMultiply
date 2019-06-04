@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28917.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AleaMult", "AleaMult\AleaMult.fsproj", "{4D487399-B874-4C06-8EA7-C4D56A5B28CA}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "AleaCublas", "AleaCublas\AleaCublas.fsproj", "{2352EB94-E97F-4F1F-A2E8-C292C071F072}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D487399-B874-4C06-8EA7-C4D56A5B28CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D487399-B874-4C06-8EA7-C4D56A5B28CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D487399-B874-4C06-8EA7-C4D56A5B28CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D487399-B874-4C06-8EA7-C4D56A5B28CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2352EB94-E97F-4F1F-A2E8-C292C071F072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2352EB94-E97F-4F1F-A2E8-C292C071F072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2352EB94-E97F-4F1F-A2E8-C292C071F072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2352EB94-E97F-4F1F-A2E8-C292C071F072}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

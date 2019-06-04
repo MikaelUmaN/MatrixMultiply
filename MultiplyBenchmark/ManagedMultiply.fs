@@ -1,4 +1,4 @@
-module ManagedMultiply
+module ManagedMultiplyMulti
 
 open MathNet.Numerics.LinearAlgebra
 open BenchmarkDotNet.Attributes

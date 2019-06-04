@@ -5,7 +5,8 @@ module DivideConquerParallelTask =
 
     // Recursively computes matrix matrix multiply. Stops recursion at size T (should fit into L1 cache)
     let divideAndConquer  (A: float[]) (B: float[]) (C: float[]) (N: int) (T: int) =
-        let rec divConquer (A: float[]) (B: float[]) (C: float[]) (N: int) (T: int) (n: int) (cr: int) (cc: int) (ar: int) (ac: int) (br: int) (bc: int) =
+        let rec divConquer (A: float[]) (B: float[]) (C: float[]) (N: int) (T: int) (n: int) 
+                           (cr: int) (cc: int) (ar: int) (ac: int) (br: int) (bc: int) =
             if (n <= T) then
                 // Base case, standard naive multiply
                 ThreeLoops.multFlat A B C N n cr cc ar ac br bc

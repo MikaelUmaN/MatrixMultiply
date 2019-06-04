@@ -4,7 +4,6 @@ open MathNet.Numerics.LinearAlgebra
 open BenchmarkDotNet.Attributes
 open ManagedMultiply
 
-[<RPlotExporter; RankColumn>]
 type Benchmark() =
 
     let mutable A: float[] = null
@@ -14,7 +13,7 @@ type Benchmark() =
     [<Params(4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096)>]
     member val N = 0 with get, set
 
-    [<Params(16, 32, 64, 128, 256)>]
+    [<Params(16)>]//, 32, 64, 128, 256)>]
     member val T = 0 with get, set
 
     [<GlobalSetup>]

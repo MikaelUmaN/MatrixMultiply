@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Compile Include="CudaMult.fs" />
+    <Compile Include="BlockedMult.fs" />
+    <Compile Include="KernelTest.fs" />
+    <Compile Include="Nop.fs" />
+    <Compile Include="NaiveGpuMult.fs" />
+    <Compile Include="CublasMult.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+  <ItemGroup>
+    <PackageReference Include="Alea" Version="3.0.4" />
+    <PackageReference Include="Alea.CudaToolkit" Version="1.0.9" />
+    <PackageReference Include="Alea.Interop" Version="1.0.9" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.11.5" />
+    <PackageReference Include="MathNet.Numerics" Version="4.8.0" />
+    <PackageReference Include="MathNet.Numerics.FSharp" Version="4.8.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+  </ItemGroup>
+
+</Project>

@@ -16,13 +16,13 @@ let main argv =
     conf.Add(CsvExporter(CsvSeparator.CurrentCulture, summaryStyle))
     conf.Add(Job.Core.With(CsProjCoreToolchain.NetCoreApp30))
 
-    BenchmarkRunner.Run<ManagedMultiplySingleThreaded.Benchmark>(conf) |> ignore
-    BenchmarkRunner.Run<ManagedMultiply.Benchmark>(conf) |> ignore
-    BenchmarkRunner.Run<IntelMkl.Benchmark>(conf) |> ignore
-    BenchmarkRunner.Run<OpenBlas.Benchmark>(conf) |> ignore
+    //BenchmarkRunner.Run<ManagedMultiplySingleThreaded.Benchmark>(conf) |> ignore
+    //BenchmarkRunner.Run<ManagedMultiplyMulti.Benchmark>(conf) |> ignore
+    //BenchmarkRunner.Run<IntelMkl.Benchmark>(conf) |> ignore
+    //BenchmarkRunner.Run<OpenBlas.Benchmark>(conf) |> ignore
     //BenchmarkRunner.Run<DivideConquerBenchmark.Benchmark>(conf) |> ignore
     //BenchmarkRunner.Run<DivideConquerParallelBenchmark.Benchmark>(conf) |> ignore
     //BenchmarkRunner.Run<TiledBenchmark.Benchmark>(conf) |> ignore
-    //BenchmarkRunner.Run<ThreeLoopsBenchmark.Benchmark>(conf) |> ignore
+    BenchmarkRunner.Run<ThreeLoopsBenchmark.Benchmark>(conf) |> ignore
 
     0
